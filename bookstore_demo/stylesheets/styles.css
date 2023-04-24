@@ -1,0 +1,508 @@
+/*
+    RMIT University Vietnam
+    Course: COSC2430 Web Programming
+    Semester: 2023A
+    Assessment: Assignment 1
+    Author: Loi Gia Long
+    ID: 3758273
+    Acknowledgement: .
+*/
+
+
+:root { /* Still in developement process. Please don't mind the mess */
+    --text-color-dark-background: rgb(0, 176, 176);
+    --background-color-dark: rgb(30 41 59);
+
+    --categories-container-font-color: black;
+    --categories-container-color: rgb(221, 223, 223);
+    --categories-container-gradient: 
+    linear-gradient(rgba(255, 255, 255, 0) 22.49%, rgb(255, 255, 255) 73.49%), 
+    linear-gradient(264.03deg, rgb(171, 194, 250) -10.27%, rgb(207, 210, 243) 35.65%, rgb(213, 236, 253) 110.66%);
+
+    --bookcover-height: 20rem;
+    --bookcover-width: 15rem;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.3rem;
+    margin: 0;
+    width: 100%;
+    
+    color:rgb(48, 255, 255);
+    background-color: var(--background-color-dark);
+    overflow-x: hidden;
+
+    border: 3px solid black;                /*For developing process, would be delete after!*/
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    margin-bottom: 3rem;
+    /* align-items: center; */
+    height: 50px;
+    width: 100vw;
+
+    background-color: var(--background-color-dark);
+
+    box-shadow: 0px 1px 5px #334155;
+    border: 0px solid #06D85F;
+}
+
+.container-logo {
+    margin-top: 1rem;
+    margin-left: 6rem;
+}
+
+.button-nav-menu {
+    /* display: hidden; */
+    width: 0;
+    border: 0px solid red;
+}
+img.nav-menu {
+    aspect-ratio: 1;
+    width: 2rem;
+    visibility: hidden;
+}
+.overlay-2 {
+    /* position: fixed; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 50ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay-2:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.nav-header {
+    margin-top: 1rem;
+    margin-right: 6rem;
+}
+
+a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    border: 0px solid yellow;
+}
+
+a.nav-link {
+    color: var(--text-color-dark-background);
+    padding-bottom: calc(2.1*var(--line-thickness));
+    transition: 0.4s;
+    margin-left: 5rem;
+}
+
+a.nav-link:hover {
+    color: white;
+}
+
+.container-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    /* align-items: ; */
+}
+.container-flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 30rem;
+}
+.margin0{
+    margin-inline: 0;
+}
+.justify-content-buttons {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    justify-content: space-evenly;
+}
+.align-items0 {
+    align-items: flex-start;
+}
+label {
+    width: max-content;
+}
+
+
+.breadcrumb {
+    display: flex;
+    margin-left: 9rem;
+    margin-bottom: 1rem;
+}
+a.crumbs {
+    margin-inline: 0.5rem;
+}
+
+.container-product-card {
+    display: flex;
+    margin-bottom: 5rem;
+}
+.background-custom {
+    display: flex;
+    flex-direction: row;
+    background: var(--categories-container-gradient);
+    border-radius: 2rem;
+    width: 25rem;
+    height: 20;
+    padding: 1rem;
+    margin-left: 7rem;
+}
+.container-product-img {
+    display: flex;
+    justify-content: right;
+    flex: 1;
+    /* width: var(--bookcover-width); */
+    /* height: 30rem; */
+}
+.container-product-xtr-imgs {
+    display: flex;
+    flex: 0.5;
+    flex-direction: column;
+    justify-content: left;
+    overflow-y: hidden;
+}
+img.xtr {
+    border: 1px solid rgb(0, 176, 176);
+    width: 6.6rem;
+    aspect-ratio: 1;
+}
+.container-product-price-cart {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: 5rem;
+    margin-left: 15rem;
+}
+.price {
+    display: flex;
+    flex-direction: row;
+}
+h3.discount {
+    margin-left: 1.5rem;
+    margin-right: 1rem;
+    font-weight: 100;
+    text-decoration: line-through;
+}
+
+a.add-cart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 2rem;
+}
+
+.product-description {
+    display: flex;
+    flex-direction: column;
+    margin-left: 7rem;
+    margin-right: 9rem;
+}
+
+.container-flex-center {
+    display: flex;
+    justify-content: center;
+}
+.container-categories-2 {
+    background-color: transparent;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    border: 0px solid blue;                 /*For developing process, would be delete after!*/
+}
+
+.container-category {
+    background: var(--categories-container-gradient);
+    border-radius: 1rem;
+
+    margin-left: 6rem;
+    margin-right: 6rem;
+    margin-bottom: 4rem;
+    width: auto;
+}
+
+a.category-name {
+    display: flex;
+    justify-content: flex-start;
+    max-width: fit-content;
+    color: var(--categories-container-font-color);
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 2rem;
+    
+    border: 0px solid black;                /*For developing process, would be delete after!*/
+}
+
+.container-book-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    border: 0px solid yellow;             /* For developing process, would be delete after! */
+}
+
+.container-book {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+
+    border: 0px solid crimson;              /*For developing process, would be delete after!*/
+}
+.container-bookcover {
+    display: flex;
+    flex-direction: column;
+    align-items: inherit;
+    height: var(--bookcover-height);
+    width: var(--bookcover-width);
+    background-color: black;
+
+    border: 3px solid #dadada                 /*For developing process, would be delete after!*/
+}
+
+img.bookcover {
+    width: auto;
+    height: var(--bookcover-height);
+}
+
+.container-book-row-view-more {
+    border: 0px solid black;                /*For developing process, would be delete after!*/
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    font-size: 1rem;
+    padding: 1rem;
+    color: #fff;
+    border: 2px solid #06D85F;
+    border-radius: 20px/50px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+.button:hover {
+    background: #06D85F;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 50ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.popup {
+    margin: 20vw;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 1s ease-in-out;
+}
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 20ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+}
+.popup .close:hover {
+    color: #06D85F;
+}
+.popup .content {
+    max-height: 30%;
+    overflow: auto;
+    color: #333;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    box-shadow: 1px 0px 5px #334155;
+    margin: 0;
+
+    border: 0px solid blue;                 /*For developing process, would be delete after!*/
+}
+
+.nav-footer {
+    border: 0px solid yellow;               /*For developing process, would be delete after!*/
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.quick-links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 50px;
+}
+
+.social-networks {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 50px;
+}
+
+.container-icon-horizontal {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 50px;
+}
+
+.small-fine-print{
+    font-size: xx-small;
+    margin-left: 20px;
+}
+
+
+@media screen and (max-width: 880px){
+    body {
+        width: 100%;
+    }
+    header {
+        width: 100%;
+    }
+    .container-logo {
+        margin-top: 1rem;
+        margin-left: 2rem;
+    }
+    .nav-header {
+        visibility: hidden;
+        /* margin: 0; */
+        width: 0;
+        /* height: 100vh; */
+        /* padding: 20px; */
+
+        /* background: hsl(0 0% 0% / 0.5); */
+        /* backdrop-filter: blur(3rem); */
+        /* z-index: 9998; */
+        
+        /* transform: translateX(100%); */
+    }
+    
+    a.nav-link {
+        margin-bottom: 20px;
+    }
+    
+    img.nav-menu {
+        visibility: visible;
+    }
+    .button-nav-menu {
+        border: 3px solid yellow;
+        display: block;
+        position: absolute;
+        aspect-ratio: 1;
+        width: 2rem;
+        top: 1rem;
+        right: 2rem;
+        /* border: 0; */
+        background: 0;
+        /* z-index: 9000; */
+    }
+    .button-nav-menu-inside-popup {
+        /* display: block; */
+        position: absolute;
+        aspect-ratio: 1;
+        top: 1.2rem;
+        width: 2rem;
+        /* z-index: 9990; */
+    }
+    /* .overlay-2 {
+        visibility: visible;
+    } */
+    #popup-nav-links {
+        /* display: flex; */
+        border: 1px solid yellow;
+        /* width: min-content; */
+    }
+    .popup-nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        position: absolute;
+        
+        background: hsl(0 0% 0% / 0.5);
+        backdrop-filter: blur(3rem);
+        z-index: 9998;
+        width: 23.6rem;
+        height: 17rem ;
+    }
+    .nav-inside-popup {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        margin-right: 3rem;
+        margin-top: 7rem;
+        /* width: 8rem; */
+    }
+
+    .container-book-row {
+        /* display: flex; */
+        flex-direction: column;
+    }
+    .container-flex-row {
+        margin-inline: 4rem;
+    }
+    .margin0{
+        margin-inline: 0;
+    }
+
+    .box {
+      width: 50vw;
+    }
+    .popup {
+      width: 50vw;
+    }
+}

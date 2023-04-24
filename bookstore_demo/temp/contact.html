@@ -1,0 +1,134 @@
+<!--
+    RMIT University Vietnam
+    Course: COSC2430 Web Programming
+    Semester: 2023A
+    Assessment: Assignment 1
+    Author: Loi Gia Long
+    ID: 3758273
+    Acknowledgement: .
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bookstore_demo/stylesheets/styles.css">
+    <title>Demo product page</title>
+</head>
+<body>
+    <header><!--Header-->
+        <div class="container-logo">
+            <a href="/bookstore_demo/index.html">Brand_name/Logo</a>
+        </div>
+
+        
+        <a href="#popup-nav-links" class="button-nav-menu">
+            <img class="nav-menu" src="/bookstore_demo/resources/menu_v2.png" alt="menu">
+        </a>
+        
+
+        <div id="popup-nav-links" class="overlay-2">
+            <div class="popup-nav-links">
+                <a href="#" class="close button-nav-menu button-nav-menu-inside-popup">
+                    <img class="nav-menu" src="/bookstore_demo/resources/menu_v2.png" alt="menu">
+                </a>
+                <div class="content nav-links nav-inside-popup">
+                    <a class="nav-link" href="/bookstore_demo/fictions/fiction.html">Fiction</a>
+                    <a class="nav-link" href="/bookstore_demo/nonfiction/nonfiction.html">non_fiction</a>
+                    <a class="nav-link" href="#popup-viewmore">else</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-header" id="nav-header">
+            <div class="nav-links">
+                <a class="nav-link" href="/fictions/fiction.html">Fiction</a>
+                <a class="nav-link" href="/bookstore_demo/nonfiction/nonfiction.html">non_fiction</a>
+                <a class="nav-link" href="#popup-viewmore">else</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container-flex-center">
+        <h3>Contact Us</h3>
+    </div>
+
+    <div class="container-form">
+        <form action="#" method="post">
+            <div class="container-flex-row">
+                <label for="contact_purpose">Contact purpose: </label>
+                <select name="contact_purpose" id="contact_purpose">
+                    <option value="sell_books">I want to sell books</option>
+                    <option value="buy_books">I want to buy books</option>
+                </select>
+            </div>
+            <div class="container-flex-row">
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name">
+            </div>
+            <div class="container-flex-row">
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="container-flex-row">
+                <label for="mobile_number">Phone number: </label>
+                <input type="number" name="mobile_number" id="mobile_number">
+            </div>
+            <div class="container-flex-row">
+                <label for="contact_preference"> Contact preference: </label>
+                
+                <div class="container-flex-row margin0">
+                    <input type="checkbox" name="contact_preference_mail" id="contact_preference_mail" value="Email">
+                    <label for="contact_preference_mail">Email</label>
+                    <input type="checkbox" name="contact_preference_mobile" id="contact_preference_mobile" value="Phone number">
+                    <label for="contact_preference_mobile">Phone number</label>
+                </div>
+            </div>
+            <div class="container-flex-row">
+                <label for="newsletter">Receive weekly newsletter: </label>
+
+                <div class="container-flex-row margin0">
+                    <input type="radio" name="newsletter" id="yes" value="yes" checked>
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="newsletter" id="no" value="no">
+                    <label for="no">no</label>
+                </div>
+            </div>
+            <div class="container-flex-row align-items0">
+                <label for="extra_notes">Extra notes:</label>
+                <textarea name="extra_notes" id="extra_notes" cols="45" rows="5"></textarea>
+            </div>
+            <div class="container-flex-row justify-content-buttons">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+    </div>
+
+    <footer><!--Footer-->
+        <nav class="nav-footer">
+            <div class="quick-links">
+                <p>Quick links</p>
+                <a href="#popup-viewmore" class="quick-link">About Us</a>
+                <a href="#popup-viewmore" class="quick-link">Privacy Policy</a>
+                <a href="#popup-viewmore" class="quick-link">Terms</a>
+                <a href="#popup-viewmore" class="quick-link">copyright</a>
+                <a href="/bookstore_demo/temp/contact.html" class="quick-link">Contact Us</a>
+            </div>
+        </nav>
+    </footer>
+    <p class="small-fine-print">© copyright something something...</p>
+</body>
+<div id="popup-viewmore" class="overlay">
+    <div class="popup">
+        <h2>W.I.P</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            Unfortunately this function is yet to be implemented or is outside of project scope!
+        </div>
+    </div>
+</div>
+</html>

@@ -1,0 +1,117 @@
+<!--
+    RMIT University Vietnam
+    Course: COSC2430 Web Programming
+    Semester: 2023A
+    Assessment: Assignment 1
+    Author: Loi Gia Long
+    ID: 3758273
+    Acknowledgement: .
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bookstore_demo/stylesheets/styles.css">
+    <title>Demo product page</title>
+</head>
+<body>
+    <header><!--Header-->
+        <div class="container-logo">
+            <a href="/bookstore_demo/index.html">Brand_name/Logo</a>
+        </div>
+
+        
+        <a href="#popup-nav-links" class="button-nav-menu">
+            <img class="nav-menu" src="/bookstore_demo/resources/menu_v2.png" alt="menu">
+        </a>
+        
+
+        <div id="popup-nav-links" class="overlay-2">
+            <div class="popup-nav-links">
+                <a href="#" class="close button-nav-menu button-nav-menu-inside-popup">
+                    <img class="nav-menu" src="/bookstore_demo/resources/menu_v2.png" alt="menu">
+                </a>
+                <div class="content nav-links nav-inside-popup">
+                    <a class="nav-link" href="/bookstore_demo/fictions/fiction.html">Fiction</a>
+                    <a class="nav-link" href="/bookstore_demo/nonfiction/nonfiction.html">non_fiction</a>
+                    <a class="nav-link" href="#popup-viewmore">else</a>
+                </div>
+            </div>
+        </div>
+
+        <nav class="nav-header" id="nav-header">
+            <div class="nav-links">
+                <a class="nav-link" href="/bookstore_demo/fictions/fiction.html">Fiction</a>
+                <a class="nav-link" href="/bookstore_demo/nonfiction/nonfiction.html">non_fiction</a>
+                <a class="nav-link" href="#popup-viewmore">else</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="breadcrumb">
+        <a class="crumbs" href="/bookstore_demo/index.html">Home</a>&gt;
+        <a class="crumbs" href="/bookstore_demo/fictions/fiction.html">Fiction</a>&gt;
+        <a class="crumbs" href="#">Dune demo</a>
+    </div>
+
+    <div class="container-product-card">
+        <div class="background-custom">
+            <div class="container-product-img">
+                <div class="container-bookcover">
+                    <img class="bookcover" src="/bookstore_demo/resources/fiction_science_dune.jpg" alt="">
+                </div>
+            </div>
+            <div class="container-product-xtr-imgs">
+                <img class="xtr" src="/bookstore_demo/resources/demo_1.jpg" alt="demo-xtr">
+                <img class="xtr" src="/bookstore_demo/resources/demo_1.jpg" alt="demo-xtr">
+                <img class="xtr" src="/bookstore_demo/resources/demo_1.jpg" alt="demo-xtr">
+            </div>
+        </div>
+        <div class="container-product-price-cart">
+            <div class="price">
+                <h3 class="discount">99.99</h3>
+                <h3>70.99</h3>
+                <h3>$</h3>
+            </div>
+            <a class="add-cart button" href="#popup-viewmore">
+                <h4>Add to cart</h4>
+            </a>
+        </div>
+    </div>
+    <div class="product-description">
+        <h4>Dune</h4>
+        <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti, asperiores! Soluta velit perferendis, culpa odit hic similique quam vero necessitatibus officia illo impedit est itaque asperiores nam alias tenetur inventore.
+            Quisquam culpa nulla libero, porro eaque dolor necessitatibus dolorum. Voluptates sunt tenetur hic perferendis possimus autem veniam explicabo fuga ipsam nesciunt fugiat ipsa blanditiis, doloremque numquam reprehenderit iusto earum. Totam!
+            Magni eos cum quaerat ipsam error exercitationem similique nemo quo recusandae eum voluptatum, numquam sit eveniet odio. Ducimus, a. Consequuntur, temporibus doloribus animi delectus distinctio necessitatibus esse eligendi voluptatem corrupti.
+        </p>
+    </div>
+
+    <footer><!--Footer-->
+        <nav class="nav-footer">
+            <div class="quick-links">
+                <p>Quick links</p>
+                <a href="#popup-viewmore" class="quick-link">About Us</a>
+                <a href="#popup-viewmore" class="quick-link">Privacy Policy</a>
+                <a href="#popup-viewmore" class="quick-link">Terms</a>
+                <a href="#popup-viewmore" class="quick-link">copyright</a>
+                <a href="/bookstore_demo/temp/contact.html" class="quick-link">Contact Us</a>
+            </div>
+        </nav>
+    </footer>
+    <p class="small-fine-print">© copyright something something...</p>
+</body>
+<div id="popup-viewmore" class="overlay">
+    <div class="popup">
+        <h2>W.I.P</h2>
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+            Unfortunately this function is yet to be implemented or is outside of project scope!
+        </div>
+    </div>
+</div>
+</html>
