@@ -155,6 +155,7 @@ a.crumbs {
 
 .container-product-card {
     display: flex;
+    flex-direction: row;
     margin-bottom: 5rem;
 }
 .background-custom {
@@ -497,6 +498,10 @@ footer {
     }
     .margin0{
         margin-inline: 0;
+    }
+
+    .container-product-card {
+        flex-direction: column;
     }
 
     .box {
